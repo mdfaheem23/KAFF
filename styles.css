@@ -426,34 +426,79 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:none
 .kf-pr-bar{position:absolute;bottom:36px;left:64px;right:64px;height:.5px;background:rgba(241,234,217,.18);z-index:10}
 .kf-pr-bar i{display:block;height:100%;background:var(--sand);transform:scaleX(0);transform-origin:left;will-change:transform}
 
+/* ─── Responsive ≤ 900px ─── */
 @media (max-width:900px){
-  .kf-pr-text{padding:0 20px 80px}
-  .kf-pr-bar{left:20px;right:20px}
-  .kf-pr-chrome{padding:80px 20px 0}
-}
+  /* Base padding */
+  .kf-nav,.kf-hero,.kf-manifesto,.kf-stats,.kf-services,
+  .kf-proj-head,.kf-proj-track,.kf-proj-foot,.kf-founder,.kf-footer{padding-left:20px;padding-right:20px}
 
-/* ─── Responsive ─── */
-@media (max-width:900px){
+  /* Nav */
+  .kf-nav-links{display:none}
 
-@media (max-width:900px){
-  .kf-pad,.kf-nav,.kf-hero,.kf-manifesto,.kf-stats,.kf-services,.kf-proj-head,.kf-proj-track,.kf-proj-foot,.kf-founder,.kf-footer{padding-left:20px;padding-right:20px}
+  /* Hero */
   .kf-hero-meta{display:none}
   .kf-hero-imgwrap{display:none}
   .kf-hero-foot{grid-template-columns:1fr;gap:18px}
-  .kf-manifesto{grid-template-columns:1fr}
-  .kf-manifesto .body{grid-column:auto}
-  .kf-stats{grid-template-columns:1fr 1fr}
-  .kf-services-head{grid-template-columns:1fr}
-  .kf-services-head h2{grid-column:auto}
-  .kf-svc{grid-template-columns:40px 1fr;gap:14px}
-  .kf-svc .desc, .kf-svc .arrow{display:none}
-  .kf-founder{grid-template-columns:1fr}
-  .kf-founder .imgcol, .kf-founder .txtcol{grid-column:auto}
-  .kf-founder .imgcol .img{height:420px}
-  .kf-founder .body{grid-template-columns:1fr}
-  .kf-footer-col{grid-column:span 6}
-  .kf-proj-card{width:80vw}
-  .kf-proj-card .img{height:60vw}
-  .kf-nav-links{display:none}
   .kf-hero-scrollhint{bottom:24px}
+
+  /* Manifesto */
+  .kf-manifesto{padding:80px 20px;grid-template-columns:1fr}
+  .kf-manifesto .lbl{display:none}
+  .kf-manifesto .body{grid-column:auto;font-size:clamp(22px,6.5vw,34px)}
+
+  /* Stats */
+  .kf-stats{padding:60px 20px;grid-template-columns:repeat(3,1fr);gap:0}
+  .kf-stat .num{font-size:clamp(40px,12vw,72px)}
+
+  /* Services */
+  .kf-services{padding:80px 20px}
+  .kf-services-head{grid-template-columns:1fr;margin-bottom:40px}
+  .kf-services-head h2{grid-column:auto;font-size:clamp(32px,8vw,52px)}
+  .kf-svc{grid-template-columns:36px 1fr;gap:12px;padding:24px 0}
+  .kf-svc .name{font-size:clamp(28px,7.5vw,44px)}
+  .kf-svc .desc,.kf-svc .arrow{display:none}
+
+  /* Projects */
+  .kf-proj-head h2{font-size:clamp(28px,7vw,48px)}
+  .kf-proj-card{width:82vw}
+  .kf-proj-card .img{height:62vw}
+  .kf-proj-card h3{font-size:22px}
+
+  /* Process */
+  .kf-pr-chrome{padding:28px 20px 0}
+  .kf-pr-text{padding:0 20px 72px;gap:14px}
+  .kf-pr-title{font-size:clamp(44px,11vw,80px)}
+  .kf-pr-body{font-size:15px;max-width:none}
+  .kf-pr-bar{left:20px;right:20px;bottom:28px}
+
+  /* Founder */
+  .kf-founder{grid-template-columns:1fr;padding:80px 20px;gap:36px}
+  .kf-founder .imgcol,.kf-founder .txtcol{grid-column:auto}
+  .kf-founder .imgcol .img{height:72vw}
+  .kf-founder h2{font-size:clamp(32px,8vw,52px)}
+  .kf-founder .signoff{flex-direction:column;gap:10px;align-items:flex-start}
+
+  /* Related */
+  .kf-related{padding:80px 20px}
+  .kf-related-head{grid-template-columns:1fr;gap:12px;margin-bottom:36px}
+  .kf-related-head .lbl,.kf-related-head h2{grid-column:auto}
+
+  /* Footer */
+  .kf-footer{padding:80px 20px 32px}
+  .kf-footer-cta{font-size:clamp(40px,10vw,72px);margin-bottom:60px}
+  .kf-footer-grid{grid-template-columns:1fr 1fr;gap:40px 20px}
+  .kf-footer-col{grid-column:auto}
+  .kf-footer-mark{font-size:clamp(72px,22vw,160px)}
+  .kf-footer-bottom{flex-direction:column;gap:8px;text-align:center}
+}
+
+/* ─── Responsive ≤ 480px ─── */
+@media (max-width:480px){
+  .kf-stats{grid-template-columns:1fr;border-bottom:none}
+  .kf-stat{padding:28px 0;border-bottom:.5px solid var(--line)}
+  .kf-footer-grid{grid-template-columns:1fr;gap:32px}
+  .kf-menu-panel{width:100vw}
+  .kf-menu-list a .lbl{font-size:clamp(36px,10vw,52px)}
+  .kf-pr-title{font-size:clamp(40px,12vw,72px)}
+  .kf-founder .imgcol .img{height:80vw}
 }
