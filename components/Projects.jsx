@@ -36,22 +36,20 @@ function Projects({ cardStyle = 'standard', intensity = 'heavy' }) {
       }
     });
 
-    // Per-card image cover reveal as it scrolls into view
+    // Fade each card in as it enters the horizontal viewport
     const cards = track.querySelectorAll('.kf-proj-card');
     cards.forEach((card) => {
-      const imgDiv = card.querySelector('.img');
-      if (imgDiv) {
-        gsap.fromTo(imgDiv, { '--cover-scale': 1 }, {
-          '--cover-scale': 0,
-          scrollTrigger: {
-            trigger: card,
-            containerAnimation: tween,
-            start: 'left 80%',
-            end:   'left 30%',
-            scrub: true,
-          }
-        });
-      }
+      gsap.fromTo(card, { opacity: 0, y: 24 }, {
+        opacity: 1, y: 0, duration: 0.6, ease: 'expo.out',
+        scrollTrigger: {
+          trigger: card,
+          containerAnimation: tween,
+          start: 'left 92%',
+          end:   'left 65%',
+          scrub: false,
+          toggleActions: 'play none none none',
+        }
+      });
     });
 
     return () => { tween.scrollTrigger && tween.scrollTrigger.kill(); tween.kill(); ST.refresh(); };
