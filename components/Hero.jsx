@@ -84,7 +84,6 @@ function Hero() {
       <div className="kf-hero-foot">
         <p>Residential practice of Abdul Khaled — modern minimalist homes across Tamil Nadu since 2011.</p>
         <div />
-        <div className="scroll">Scroll</div>
       </div>
     </section>
   );

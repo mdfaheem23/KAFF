@@ -39,11 +39,10 @@ function Projects({ cardStyle = 'standard', intensity = 'heavy' }) {
     // Per-card image cover reveal as it scrolls into view
     const cards = track.querySelectorAll('.kf-proj-card');
     cards.forEach((card) => {
-      const cover = card.querySelector('.img::after') || card.querySelector('.img');
-      const after = card.querySelector('.img');
-      if (after) {
-        gsap.fromTo(after, { '--mask': '100%' }, {
-          '--mask': '0%',
+      const imgDiv = card.querySelector('.img');
+      if (imgDiv) {
+        gsap.fromTo(imgDiv, { '--cover-scale': 1 }, {
+          '--cover-scale': 0,
           scrollTrigger: {
             trigger: card,
             containerAnimation: tween,
