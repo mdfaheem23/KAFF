@@ -249,8 +249,8 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:none
 }
 
 /* ─── Projects (horizontal scroll) ─── */
-.kf-projects{position:relative;background:var(--ink);color:var(--bone);overflow:hidden;padding:120px 0 0}
-.kf-proj-head{padding:0 36px 80px;display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.kf-projects{position:relative;background:var(--ink);color:var(--bone);overflow:hidden;padding:80px 0 0}
+.kf-proj-head{padding:0 36px 56px;display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
 .kf-proj-head .lbl{grid-column:1/3;color:rgba(243,239,231,.55)}
 .kf-proj-head .lbl .dot{background:var(--bone)}
 .kf-proj-head h2{grid-column:4/12;margin:0;
@@ -259,14 +259,14 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:none
 }
 .kf-proj-head h2 em{font-style:italic;color:var(--sand);font-variation-settings:"opsz" 144, "SOFT" 100, "WONK" 1}
 
-.kf-proj-track{display:flex;gap:48px;padding:0 36px 80px;will-change:transform}
+.kf-proj-track{display:flex;gap:48px;padding:0 36px 56px;will-change:transform}
 .kf-proj-card{
   flex:0 0 auto;width:560px;display:flex;flex-direction:column;gap:18px;
   position:relative;
 }
 .kf-proj-card.tall{width:420px}
 .kf-proj-card .img{
-  position:relative;width:100%;height:clamp(360px,calc(100vh - 380px),520px);overflow:hidden;background:#1a1610;border-radius:2px;
+  position:relative;width:100%;height:clamp(260px,calc(100vh - 380px),460px);overflow:hidden;background:#1a1610;border-radius:2px;
 }
 .kf-proj-card.tall .img{height:640px}
 .kf-proj-card .img img{width:100%;height:100%;object-fit:cover;
