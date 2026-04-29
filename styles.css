@@ -124,6 +124,8 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:none
 @media(max-width:900px){
   .kf-hero-video{object-position:center 30%;will-change:auto}
   .kf-hero-vidwrap{transform:none!important}
+  .kf-hero{height:100svh;min-height:580px}
+  .kf-hero-scrollhint{bottom:32px;left:50%;transform:translateX(-50%)}
 }
 .kf-hero-vidveil{position:absolute;inset:0;background:linear-gradient(180deg, rgba(12,10,7,.45) 0%, rgba(12,10,7,.15) 35%, rgba(12,10,7,.85) 100%)}
 .kf-hero-vidcover{position:absolute;inset:0;background:#0c0a07;transform-origin:top;will-change:transform;z-index:2}

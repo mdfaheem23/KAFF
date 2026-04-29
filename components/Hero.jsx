@@ -20,18 +20,20 @@ function Hero() {
       gsap.fromTo(cover, { scaleY: 1 }, { scaleY: 0, duration: 1.6, ease: 'expo.inOut', delay: 0.3, transformOrigin: 'top' });
     }
 
-    // Title exits after 3.5s, scroll indicator appears
-    gsap.to(titleRef.current, {
-      yPercent: -30, opacity: 0, duration: 1.2, ease: 'expo.inOut', delay: 4.5,
-      onComplete: () => {
-        gsap.fromTo(scrollRef.current,
-          { opacity: 0, y: 16 },
-          { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out' }
-        );
-        gsap.to(scrollRef.current.querySelector('.kf-scroll-arrow'), {
-          y: 8, repeat: -1, yoyo: true, duration: 0.8, ease: 'sine.inOut'
-        });
-      }
+    // Title exits after 4.5s on desktop
+    if (window.innerWidth > 900) {
+      gsap.to(titleRef.current, {
+        yPercent: -30, opacity: 0, duration: 1.2, ease: 'expo.inOut', delay: 4.5
+      });
+    }
+
+    // Scroll hint always appears — not tied to title exit so it works on mobile too
+    gsap.fromTo(scrollRef.current,
+      { opacity: 0, y: 16 },
+      { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out', delay: 5.7 }
+    );
+    gsap.to(scrollRef.current.querySelector('.kf-scroll-arrow'), {
+      y: 8, repeat: -1, yoyo: true, duration: 0.8, ease: 'sine.inOut', delay: 6.5
     });
 
     if (window.ScrollTrigger) {
