@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /tweaks-panel.jsx
+
+# Crawl-delay for polite bots
+Crawl-delay: 5
+
+Sitemap: https://kaffbuilders.com/sitemap.xml

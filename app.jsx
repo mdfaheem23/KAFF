@@ -63,6 +63,7 @@ function App() {
       <Services />
       <Process />
       <Projects cardStyle={t.cardStyle} intensity={t.intensity} />
+      <RelatedImages />
       <Founder />
       <Footer />
 
