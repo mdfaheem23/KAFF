@@ -5,10 +5,10 @@ function Projects({ cardStyle = 'standard', intensity = 'heavy' }) {
 
   const projects = [
     { num: '01', name: 'House of', em: 'Stillness', loc: 'Salem · Fairlands', yr: '2024', img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', tall: false },
-    { num: '02', name: 'Cauvery', em: 'Residence', loc: 'Tiruchengode', yr: '2024', img: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80', tall: true },
+    { num: '02', name: 'Cauvery', em: 'Residence', loc: 'Tiruchengode', yr: '2024', img: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80', tall: false },
     { num: '03', name: 'Lime &', em: 'Light', loc: 'Salem · Hasthampatti', yr: '2023', img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80', tall: false },
     { num: '04', name: 'Coorg', em: 'Retreat', loc: 'Yercaud', yr: '2023', img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80', tall: false },
-    { num: '05', name: 'Granary', em: 'House', loc: 'Namakkal', yr: '2022', img: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80', tall: true },
+    { num: '05', name: 'Granary', em: 'House', loc: 'Namakkal', yr: '2022', img: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80', tall: false },
     { num: '06', name: 'Mango', em: 'Pavilion', loc: 'Erode', yr: '2022', img: 'https://images.unsplash.com/photo-1600573472556-e636c2acda88?auto=format&fit=crop&w=1200&q=80', tall: false },
     { num: '07', name: 'Twin', em: 'Courtyards', loc: 'Salem · Suramangalam', yr: '2021', img: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80', tall: false },
   ];
