@@ -39,10 +39,13 @@ function Hero() {
         yPercent: -8, ease: 'none',
         scrollTrigger: { trigger: '.kf-hero', start: 'top top', end: 'bottom top', scrub: true }
       });
-      gsap.to('.kf-hero-vidwrap', {
-        yPercent: 12, ease: 'none',
-        scrollTrigger: { trigger: '.kf-hero', start: 'top top', end: 'bottom top', scrub: true }
-      });
+      // Disable video parallax on mobile — causes jank and bad framing
+      if (window.innerWidth > 900) {
+        gsap.to('.kf-hero-vidwrap', {
+          yPercent: 12, ease: 'none',
+          scrollTrigger: { trigger: '.kf-hero', start: 'top top', end: 'bottom top', scrub: true }
+        });
+      }
     }
   }, []);
 
@@ -59,7 +62,7 @@ function Hero() {
   return (
     <section className="kf-hero" id="top">
       <div className="kf-hero-vidwrap">
-        <video ref={videoRef} className="kf-hero-video" autoPlay muted loop playsInline preload="auto" >
+        <video ref={videoRef} className="kf-hero-video" autoPlay muted loop playsInline preload="auto" poster="assets/related-01.jpg">
           <source src="assets/video.mp4" type="video/mp4" />
         </video>
         <div className="kf-hero-vidveil" />
