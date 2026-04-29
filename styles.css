@@ -455,4 +455,5 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:none
   .kf-proj-card{width:80vw}
   .kf-proj-card .img{height:60vw}
   .kf-nav-links{display:none}
+  .kf-hero-scrollhint{bottom:24px}
 }
