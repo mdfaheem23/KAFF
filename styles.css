@@ -413,18 +413,14 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:none
 
 .kf-pr-img{position:absolute;inset:0;overflow:hidden;background:#0c0a07}
 .kf-pr-img img{width:100%;height:100%;object-fit:cover;will-change:transform;filter:brightness(.65) saturate(.9)}
-.kf-pr-cols{position:absolute;inset:0;display:flex;pointer-events:none;z-index:2}
-.kf-pr-cols .col{flex:1;background:#0c0a07;transform-origin:top;will-change:transform}
+
 .kf-pr-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg, rgba(12,10,7,.35) 0%, rgba(12,10,7,.1) 40%, rgba(12,10,7,.7) 100%)}
 
-.kf-pr-text{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:0 64px 120px;display:flex;flex-direction:column;gap:24px}
-.kf-pr-numwrap{overflow:hidden;line-height:1}
-.kf-pr-num{display:inline-block;font-family:var(--mono);font-size:13px;letter-spacing:.18em;color:var(--sand);will-change:transform}
-.kf-pr-title{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(72px,12vw,200px);line-height:.92;letter-spacing:-.025em;font-variation-settings:"opsz" 144, "SOFT" 30;color:#f1ead9}
-.kf-pr-title .ln{display:block;overflow:hidden}
-.kf-pr-title .word{display:inline-block;will-change:transform}
-.kf-pr-title em{font-style:italic;color:var(--sand);font-weight:300;font-variation-settings:"opsz" 144, "SOFT" 100, "WONK" 1}
-.kf-pr-body{margin:0;max-width:36ch;font-family:var(--serif);font-weight:300;font-size:clamp(18px,1.5vw,22px);line-height:1.45;color:rgba(241,234,217,.78);will-change:transform,opacity}
+.kf-pr-text{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:0 64px 120px;display:flex;flex-direction:column;gap:20px;will-change:transform,opacity}
+.kf-pr-num{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--sand);text-transform:uppercase}
+.kf-pr-title{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(64px,11vw,190px);line-height:.92;letter-spacing:-.025em;font-variation-settings:"opsz" 144,"SOFT" 30;color:#f1ead9}
+.kf-pr-title em{font-style:italic;color:var(--sand);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1}
+.kf-pr-body{margin:0;max-width:38ch;font-family:var(--serif);font-weight:300;font-size:clamp(16px,1.4vw,21px);line-height:1.5;color:rgba(241,234,217,.75)}
 
 .kf-pr-bar{position:absolute;bottom:36px;left:64px;right:64px;height:.5px;background:rgba(241,234,217,.18);z-index:10}
 .kf-pr-bar i{display:block;height:100%;background:var(--sand);transform:scaleX(0);transform-origin:left;will-change:transform}
