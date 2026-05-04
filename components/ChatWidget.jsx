@@ -26,13 +26,23 @@ function ChatWidget() {
     //   fetch('http://localhost:8000/chat', { method:'POST', body: JSON.stringify({ message: text }) })
     //     .then(r => r.json()).then(data => { setMessages(m => [...m, { role:'agent', content: data.reply }]); setLoading(false); })
     // ─────────────────────────────────────────────────────────────────
-    setTimeout(() => {
-      setMessages(m => [...m, {
-        role: 'agent',
-        content: 'Agent is not yet connected. Wire up agent.py to enable AI responses.'
-      }]);
-      setLoading(false);
-    }, 800);
+    fetch('http://localhost:8000/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: text,
+        history: messages.map(m => ({ role: m.role, content: m.content })),
+      }),
+    })
+      .then(r => r.json())
+      .then(data => {
+        setMessages(m => [...m, { role: 'agent', content: data.reply }]);
+        setLoading(false);
+      })
+      .catch(() => {
+        setMessages(m => [...m, { role: 'agent', content: 'Could not reach the agent. Make sure agent.py is running on port 8000.' }]);
+        setLoading(false);
+      });
   }
 
   function handleKey(e) {
