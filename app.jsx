@@ -65,6 +65,7 @@ function App() {
       <Projects cardStyle={t.cardStyle} intensity={t.intensity} />
       <Founder />
       <Footer />
+      <ChatWidget />
 
       <TweaksPanel>
         <TweakSection label="Palette" />
