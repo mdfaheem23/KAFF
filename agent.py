@@ -15,7 +15,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Tighten to your domain in production
+    allow_origins=["https://kaff-kappa.vercel.app"],  # Tighten to your domain in production
     allow_methods=["POST"],
     allow_headers=["*"],
 )
